@@ -1817,7 +1817,7 @@ header.top { gap: 24px; }
               <span class="mono sd-dim">No visuals yet</span>
             </div>
           </div>
-          <video class="after" src="videos/script-after.mp4" muted playsinline preload="metadata" poster="img/poster-script.jpg"></video>
+          <video class="after" src="script-after.mp4" muted playsinline preload="metadata" poster="img/poster-script.jpg"></video>
           <div class="handle"><div class="line"></div><div class="knob"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M9 7l-5 5 5 5M15 7l5 5-5 5"/></svg></div></div>
           <span class="tag b mono">Before · Script</span>
           <span class="tag a mono">After</span>
@@ -1837,7 +1837,7 @@ header.top { gap: 24px; }
               <span class="mono sd-dim">No visuals yet</span>
             </div>
           </div>
-          <video class="after" src="videos/script2-after.mp4" muted playsinline preload="metadata" poster="img/poster-script2.jpg"></video>
+          <video class="after" src="script2-after.mp4" muted playsinline preload="metadata" poster="img/poster-script2.jpg"></video>
           <div class="handle"><div class="line"></div><div class="knob"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M9 7l-5 5 5 5M15 7l5 5-5 5"/></svg></div></div>
           <span class="tag b mono">Before · Script</span>
           <span class="tag a mono">After</span>
@@ -1846,8 +1846,8 @@ header.top { gap: 24px; }
       </div>
       <div class="slide" data-kind="wide" data-tab="1" data-note="Made for AI avatar channels" aria-hidden="true">
         <div class="compare" tabindex="0" role="slider" aria-label="Before and after, avatar video. Drag or use arrow keys to compare." aria-valuemin="0" aria-valuemax="100" aria-valuenow="50">
-          <video class="before" src="videos/faceless-before.mp4" muted loop playsinline preload="metadata" poster="img/poster-faceless.jpg"></video>
-          <video class="after" src="videos/faceless-after.mp4" muted playsinline preload="metadata" poster="img/poster-faceless.jpg"></video>
+          <video class="before" src="faceless-before.mp4" muted loop playsinline preload="metadata" poster="img/poster-faceless.jpg"></video>
+          <video class="after" src="faceless-after.mp4" muted playsinline preload="metadata" poster="img/poster-faceless.jpg"></video>
           <div class="handle"><div class="line"></div><div class="knob"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M9 7l-5 5 5 5M15 7l5 5-5 5"/></svg></div></div>
           <span class="tag b mono">Before</span>
           <span class="tag a mono">After</span>
@@ -1856,8 +1856,8 @@ header.top { gap: 24px; }
       </div>
       <div class="slide" data-kind="wide" data-tab="2" data-note="For creators on camera" aria-hidden="true">
         <div class="compare" tabindex="0" role="slider" aria-label="Before and after, talking-head video. Drag or use arrow keys to compare." aria-valuemin="0" aria-valuemax="100" aria-valuenow="50">
-          <video class="before" src="videos/finance-before.mp4" muted loop playsinline preload="metadata" poster="img/poster.jpg"></video>
-          <video class="after" src="videos/finance-after.mp4" muted playsinline preload="metadata" poster="img/poster.jpg"></video>
+          <video class="before" src="finance-before.mp4" muted loop playsinline preload="metadata" poster="img/poster.jpg"></video>
+          <video class="after" src="finance-after.mp4" muted playsinline preload="metadata" poster="img/poster.jpg"></video>
           <div class="handle"><div class="line"></div><div class="knob"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M9 7l-5 5 5 5M15 7l5 5-5 5"/></svg></div></div>
           <span class="tag b mono">Before</span>
           <span class="tag a mono">After</span>
@@ -1869,8 +1869,8 @@ header.top { gap: 24px; }
           <div class="phone">
             <span class="island" aria-hidden="true"></span>
             <div class="compare" data-nosync tabindex="0" role="slider" aria-label="Before and after, vertical reel. Drag or use arrow keys to compare." aria-valuemin="0" aria-valuemax="100" aria-valuenow="50">
-              <video class="before" src="videos/reel-before.mp4" muted loop playsinline preload="metadata" poster="img/poster-reel.jpg"></video>
-              <video class="after" src="videos/reel-after.mp4" muted playsinline preload="metadata" poster="img/poster-reel.jpg"></video>
+              <video class="before" src="reel-before.mp4" muted loop playsinline preload="metadata" poster="img/poster-reel.jpg"></video>
+              <video class="after" src="reel-after.mp4" muted playsinline preload="metadata" poster="img/poster-reel.jpg"></video>
               <div class="handle"><div class="line"></div><div class="knob"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M9 7l-5 5 5 5M15 7l5 5-5 5"/></svg></div></div>
               <span class="tag b mono">Before</span>
               <span class="tag a mono">After</span>
@@ -1993,7 +1993,7 @@ header.top { gap: 24px; }
 const reduce = matchMedia("(prefers-reduced-motion: reduce)").matches;
 /* Phones and data-saver connections load lighter 640px versions of every clip */
 if (matchMedia("(max-width: 720px)").matches || (navigator.connection && navigator.connection.saveData)) {
-  document.querySelectorAll('video[src^="videos/"]').forEach(v => { v.src = v.getAttribute("src").replace(/\.mp4$/, "-m.mp4"); });
+  document.querySelectorAll('video[src$=".mp4"]').forEach(v => { v.src = v.getAttribute("src").replace(/\.mp4$/, "-m.mp4"); });
 }
 const $ = id => document.getElementById(id);
 const ICON_OFF = '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M11 5L6 9H3v6h3l5 4z"/><path d="M22 9l-6 6M16 9l6 6"/></svg>';
